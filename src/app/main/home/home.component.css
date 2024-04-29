@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 1080px;
+    background-image: url('https://s3-alpha-sig.figma.com/img/51f3/175f/da452d710f34dbfbc29ee1eeb4ce2f5b?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qTdZXABbUk0o8nGDxxJ9yF8t2TB8NlQR~TJck6WsiZ79AeOUS3von~sUvOUkeOr9HY2O4JFxsW7uos8Y~FERE0XosVgVmeSHigRIY8xwVbGxnieqGN0d1G3ZjyhQ5RjQ8OauNgggpdglj-Hf4SFCTkMd-C2zSlnJ8WLOhXSm7PwMwhR2YLBETjzWn9Vvs4KJ9h31LGYAfVAULiyl04O8l-kkwJ2i0RQJ4lqHlHNbSsIpxVTB-jNiQKvrtayIuqMZly1R-yYAgvtS-xnDGigLNmdSCpQuF~lRcg6JmrOrTZ9NwfvLnK293V-9-AjtdYZHc-nxWJWhAbU941T92VvQ5w__');
+    background-size: cover;
+    background-position: center;
+}
+
+.rectangle {
+    width: 220px;
+    height: 220px;
+    border-radius: 60px 60px 60px 60px;
+    background: linear-gradient(94.79deg, #FFFFFF 0%, rgba(255, 255, 255, 0.4) 100%);
+    border: 1px solid #FFFFFFCC;
+    box-shadow: 0px 4px 16px 0px #00000080;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.rectangle p {
+    margin: 0; /* 移除段落元素的外边距 */
+}
