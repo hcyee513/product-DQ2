@@ -6,3 +6,18 @@ body {
 /* [data-bs-theme=dark] {
   --bs-body-bg: #072F4D;
 } */
+.other-page {
+    margin: 0;
+    padding: 0;
+    height: 1080px;
+    background-image: url('https://s3-alpha-sig.figma.com/img/9d4b/eaae/0fa731427675e6e5286bd24c86aff943?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mPHp1B-ICEJ6KoXnrR0qf5a2hEZy35YpJIOkse4~TJBXmyydGMY9540sHXdHJIDiHwXjCARQDoq-RTvazYFJ5XusXqy3CNDUurAbcnt9r7XXrNKOi8MM74FKriCrDvV9lE8TEvUOHFruhzrIfGghSuJ8wu-NIVJmSP6qgPDiFBRgbA1xkC5bwPPLaLzAF0HA7gm11acIJbyAViz7ttgpdn2MF-hfl1Oo4Ev-JIMRvujoNjAWRlY9MCtqzgBi0Dnfok7jiEFxznV9sH6b-patdvZvb9GH2qn27UlI40ZlwNoCKRj0vcUz3rL4qnzikvXSgpW8BWvIieopPdCAqgKBOg__');
+    background-size: cover;
+    background-position: center;
+}
+.title {
+    font-family: PingFang TC;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: left;
+}

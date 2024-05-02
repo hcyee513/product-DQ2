@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  public headerHiden: boolean = false;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((val) => {
+      if (this.router.url === '/main/home') {
+        this.headerHiden = true;
+      } else {
+        this.headerHiden = false;
+      }
+    })
+   }
 
   ngOnInit(): void {
   }
