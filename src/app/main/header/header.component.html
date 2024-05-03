@@ -4,12 +4,12 @@
             <a class="navbar-brand icon-btn-logo" href="#"></a>
             <a class="navbar-brand title" href="#">{{title}}</a>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" (click)="toggleNavPanel()" [attr.data-bs-target]="'#' + 'navbarNavDropdown'"
+            aria-controls="navbarNavDropdown" [attr.aria-expanded]="isNavPanelOpen ? 'true' : 'false'" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse justify-content-lg-end" [attr.id]="'navbarNavDropdown'">
+            <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item mr-3">
                     <a class="nav-link" href="#">{{title}}</a>
                 </li>
@@ -24,5 +24,21 @@
                 </li>
             </ul>
         </div>
+    </div>
+    <div class="mobile-menu" [hidden]="!isNavPanelOpen" [ngClass]="{'open': isNavPanelOpen}">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">{{title}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">全球金融地圖</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">股權透視鏡</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link icon-btn-plus" href="#"></a>
+            </li>
+        </ul>
     </div>
 </nav>

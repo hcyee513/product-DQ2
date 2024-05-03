@@ -10,8 +10,6 @@
 .icon-index-logo {
     width: 240px;
     height: 235px;
-    top: 10px;
-    left: 20px;
     background-image: url('../../../assets/images/site-images/icon_index_logo.svg');
     position: absolute;
     top: 50%;

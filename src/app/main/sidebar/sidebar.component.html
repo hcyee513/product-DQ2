@@ -1,0 +1,22 @@
+<aside id="aside" class="aside" [class.visible]="isSidebarOpen">
+    <div class="container-fluid" [hidden]="!isSidebarOpen" style="margin-top: 150px;">
+        <ul *ngFor="let menu of sidebarMenu; let i = index;">
+            <li class="nav-item" role="button" [class.active]="isActive === i" (click)="toggleDropdown(i)"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="mr-2" [ngClass]="menu.iconClass"></i>
+                <span>{{menu.title}}</span>
+                <i class="icon-vector-down"></i>
+            </li>
+            <ng-container *ngIf="isActive === i">
+                <div class="dropdown-content" *ngFor="let item of sidebarMenu[i].items">
+                    <a href="#">{{item}}</a>
+                </div>
+                <div class="dropdown-content-child" *ngFor="let itemChild of sidebarMenu[i].itemsChild">
+                    <a href="#">{{itemChild}}</a>
+                </div>
+            </ng-container>
+        </ul>
+    </div>
+</aside>
+<button class="btn icon-arrow-bar-right" [hidden]="isSidebarOpen" (click)="toggleSidebar()"></button>
+<button class="btn icon-arrow-bar-left" [hidden]="!isSidebarOpen" (click)="toggleSidebar()"></button>
