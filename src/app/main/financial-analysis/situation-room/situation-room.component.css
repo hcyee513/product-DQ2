@@ -1,0 +1,43 @@
+.container {
+    text-align: center;
+}
+
+.nav-bar {
+    display: inline-block;
+    font-family: PingFang TC;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    color: rgba(229, 234, 242, 1);
+    border-bottom: 1px solid rgba(255, 168, 0, 1);
+}
+
+.nav-bar .nav-item .nav-link {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+}
+
+.nav-bar .nav-item .nav-link.active {
+    background-color: rgba(255, 168, 0, 1);
+    color: rgba(39, 51, 71, 1);
+    position: relative;
+}
+
+.nav-bar .nav-item .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 48%;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 5px solid rgba(39, 51, 71, 1);
+    display: inline-block;
+}
+
+.nav-item a:hover,
+.nav-item a.active {
+    color: rgba(255, 168, 0, 1);
+}
+
+
