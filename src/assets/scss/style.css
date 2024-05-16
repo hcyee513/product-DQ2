@@ -73,7 +73,7 @@
   --bs-link-hover-color: #fff;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
-  --bs--brown: rgba(157, 129, 96, 1);
+  --bs-brown: rgba(157, 129, 96, 1);
   --bs-green-2: rgba(111, 189, 75, 1);
   --bs-yellow-2: rgba(198, 140, 29, 1);
   --bs-purple-1: rgba(160, 78, 199, 1);
@@ -369,7 +369,7 @@ th {
 }
 
 thead {
-  color: var(--bs--brown);
+  color: var(--bs-brown);
   font-weight: 500;
   border-bottom: 1px solid black;
 }
@@ -3233,7 +3233,7 @@ textarea.form-control.is-invalid {
   --bs-btn-font-size: 1rem;
   --bs-btn-font-weight: 400;
   --bs-btn-line-height: 1.5;
-  --bs-btn-color: #212529;
+  --bs-btn-color: var(--bs-btn-color);
   --bs-btn-bg: transparent;
   --bs-btn-border-width: 1px;
   --bs-btn-border-color: transparent;
@@ -3302,6 +3302,8 @@ textarea.form-control.is-invalid {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .btn-check:checked+.btn:focus-visible,
@@ -4873,7 +4875,7 @@ fieldset:disabled .btn {
 }
 
 .card-text-2 {
-  color: var(--bs--brown);
+  color: var(--bs-brown);
 }
 
 .card-chart-title {
@@ -4888,7 +4890,7 @@ fieldset:disabled .btn {
 }
 
 .card-chart-title span {
-  color: var(--bs--brown);
+  color: var(--bs-brown);
 }
 
 .card-link+.card-link {
@@ -12806,7 +12808,11 @@ fieldset:disabled .btn {
 }
 
 .card-title-1 {
-  color: var(--bs--brown);
+  color: var(--bs-brown);
+  --bs-btn-color: var(--bs-brown);
+  --bs-btn-active-color: var(--bs-white);
+  --bs-btn-active-bg: var(--bs-brown);
+  --bs-btn-active-border-color: var(--bs-brown);
   font-family: PingFang TC;
   font-size: 16px;
   text-align: left;
