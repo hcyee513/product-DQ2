@@ -9,6 +9,13 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MainRoutingModule } from './main-routing.module';
 import { SituationRoomComponent } from './financial-analysis/situation-room/situation-room.component';
+import { DropDownListComponent } from '../share/drop-down-list/drop-down-list.component';
+import { ProfitLossAnalysisComponent } from './financial-analysis/profit-loss-analysis/profit-loss-analysis.component';
+import { AssetLiabilityAnalysisComponent } from './financial-analysis/asset-liability-analysis/asset-liability-analysis.component';
+import { DupontAnalysisComponent } from './financial-analysis/dupont-analysis/dupont-analysis.component';
+import { CashFlowStatementComponent } from './financial-analysis/financial-statements/cash-flow-statement/cash-flow-statement.component';
+import { BalanceSheetComponent } from './financial-analysis/financial-statements/balance-sheet/balance-sheet.component';
+import { IncomeStatementComponent } from './financial-analysis/financial-statements/income-statement/income-statement.component';
 
 
 @NgModule({
@@ -18,7 +25,14 @@ import { SituationRoomComponent } from './financial-analysis/situation-room/situ
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    SituationRoomComponent
+    SituationRoomComponent,
+    DropDownListComponent,
+    ProfitLossAnalysisComponent,
+    AssetLiabilityAnalysisComponent,
+    DupontAnalysisComponent,
+    CashFlowStatementComponent,
+    BalanceSheetComponent,
+    IncomeStatementComponent
   ],
   imports: [
     CommonModule,

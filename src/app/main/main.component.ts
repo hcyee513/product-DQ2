@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class MainComponent implements OnInit {
 
   public headerHiden: boolean = false;
+  public headerTitle: string = '戰情室';
 
   constructor(private router: Router) {
     this.router.events.subscribe((val) => {
@@ -21,6 +22,11 @@ export class MainComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+
+  public handleTitleClicked(title: string) {
+    console.log(title)
+    this.headerTitle = title;
   }
 
 }
