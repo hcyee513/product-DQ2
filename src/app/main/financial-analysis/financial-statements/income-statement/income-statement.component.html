@@ -1,0 +1,60 @@
+<section class="container">
+    <div class="orange-radio" style="margin-right: 30px;">
+        <app-radio-box [radioName]="'年資料'" [id]="'yearData'" [isActive]="selectedRadio === 'yearData'"
+            (click)="selectedRadio = 'yearData'"></app-radio-box>
+        <app-radio-box [radioName]="'季資料'" [id]="'quarterData'" [isActive]="selectedRadio === 'quarterData'"
+            (click)="selectedRadio = 'quarterData'"></app-radio-box>
+        <app-radio-box [radioName]="'月資料'" [id]="'monthData'" [isActive]="selectedRadio === 'monthData'"
+            (click)="selectedRadio = 'monthData'"></app-radio-box>
+        <app-drop-down-list [labelName]="'顯示期數'"></app-drop-down-list>
+        <label class="switch-indicate-label" style="--width:82;--height:44">
+            <input type="checkbox">
+            <div class="slide-toggle"></div>
+            <i class="indicator"></i>
+            <i class="icon-bi-table"></i>
+            <i class="icon-bi-pie-chart"></i>
+        </label>
+    </div>
+</section>
+<section class="container mt-4">
+    <div class="row gx-4">
+        <div class="col-12">
+            <div class="card mt-3">
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <th class="p-1 text-start" scope="col">科目</th>
+                            <th class="p-1 text-end" scope="col">2022</th>
+                            <th class="p-1 text-end" scope="col">2021</th>
+                            <th class="p-1 text-end" scope="col">2020</th>
+                            <th class="p-1 text-end" scope="col">2019</th>
+                            <th class="p-1 text-end" scope="col">2018</th>
+                            <th class="p-1 text-end" scope="col">2017</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="p-1 text-start" scope="row">2023</th>
+                                <td class="p-1 text-end">1,059</td>
+                                <td class="p-1 text-end">601</td>
+                                <td class="p-1 text-end">182</td>
+                                <td class="p-1 text-end">182</td>
+                                <td class="p-1 text-end">182</td>
+                                <td class="p-1 text-end">182</td>
+                            <tr>
+                                <th class="p-1 text-start" scope="row">2023</th>
+                                <td class="p-1 text-end">1,059</td>
+                                <td class="p-1 text-end">601</td>
+                                <td class="p-1 text-end">182</td>
+                                <td class="p-1 text-end">182</td>
+                                <td class="p-1 text-end">182</td>
+                                <td class="p-1 text-end">182</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<app-sidebar></app-sidebar>

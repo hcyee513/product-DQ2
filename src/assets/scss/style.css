@@ -81,6 +81,7 @@
   --bs-blue-7: rgba(55, 188, 197, 1);
   --bs-blue-3: rgba(39, 51, 71, 1);
   --bs-gold-4: rgba(131, 124, 111, 1);
+  --bs-transparent: transparent;
 }
 
 *,
@@ -295,6 +296,11 @@ a:not([href]):not([class]),
 a:not([href]):not([class]):hover {
   color: inherit;
   text-decoration: none;
+}
+
+a.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
 pre,
@@ -2603,7 +2609,7 @@ textarea.form-control-lg {
   height: 1em;
   margin-top: 0.25em;
   vertical-align: top;
-  background-color: transparent;
+  background-color: var(--background-color);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -2634,8 +2640,8 @@ textarea.form-control-lg {
 }
 
 .form-check-input:checked {
-  background-color: transparent;
-  border-color: var(--border-color);
+  background-color: var(--background-color-check);
+  border-color: var(--border-color-check);
 }
 
 .form-check-input:checked[type=checkbox] {
@@ -2643,7 +2649,7 @@ textarea.form-control-lg {
 }
 
 .form-check-input:checked[type=radio] {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='rgba(255, 168, 0, 1)'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='rgba(39, 51, 71, 1)'/%3e%3c/svg%3e");
 }
 
 .form-check-input[type=checkbox]:indeterminate {
@@ -12829,6 +12835,26 @@ fieldset:disabled .btn {
   background: url('../images/site-images/icon_non_liabilities_fill.svg');
 }
 
+.icon-bi-table {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 24px; 
+  height: 24px;
+  background-image: url('../images/site-images/icon_bi_table.svg');
+  z-index: 2;
+}
+
+.icon-bi-pie-chart {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 24px; 
+  height: 24px;
+  background-image: url('../images/site-images/icon_bi_pie_chart.svg');
+  z-index: 2;
+}
+
 .other-page {
   min-height: 1080px; 
   background-image: url('https://s3-alpha-sig.figma.com/img/9d4b/eaae/0fa731427675e6e5286bd24c86aff943?Expires=1716768000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=X69ALRKzppBLYw6QVDcsC-opBIKgBC2cu67l0i-O~IJz63QP752FYWMNiGhkajj8ZkoNIMd8tQ2QS6EaGCZ-sXbfKaFm0POdvJ9Ccl3roNZhZfnam~u-Aj3DErJ29~1LwGPyK4YEdfBb0yvPvuGnN5DOPtMBJChd0MNUefvD2bko2Lc4PjLhG9LCS23G0UlW8YL0zPjD6ptn5vDhjM5AcojECIijFy15Kad-ZfAoR4IKHu-zlZR6S1cfZd31KJyjB907N9eRJiZgZs9QNEzVsp5jkTXgBxrP7wFj6EvTUBiRDNP16kzxaAtRD8gtZpuRw8DpThxwKO7a72JEDP7j~w__');
@@ -13008,10 +13034,63 @@ fieldset:disabled .btn {
   }
 }
 
-.orange-radio {
+.orange-check {
   color: var(--bs-orange);
   --color: var(--bs-orange);
   --border-color: var(--bs-orange);
-
+  --background-color: transparent;
 }
+
+.orange-radio {
+  color: var(--bs-orange);
+  --color: var(--bs-orange);
+  --border-color: var(--bs-orange); 
+  --border-color-check: var(--bs-blue-3);
+  --background-color: transparent;
+  --background-color-check: var(--bs-orange);
+  --bs-btn-bg: var(--bs-orange);
+  --bs-btn-color: var(--bs-orange);
+  --bs-btn-active-color: var(--bs-blue-3);
+  --bs-btn-active-bg: var(--bs-orange);
+  --bs-btn-active-border-color: var(--bs-orange);
+}
+
+.switch-indicate-label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  appearance: none;
+}
+
+.switch-indicate-label input {
+  display: none;
+}
+
+.switch-indicate-label .slide-toggle {
+  position: relative;
+  display: block;
+  width: calc(var(--width)*1px);
+  height: calc(var(--height)*1px);
+  border-radius: calc(var(--height)*1px);
+  background: rgba(3, 32, 47, 0.2);
+}
+
+.switch-indicate-label .indicator{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(var(--height)*1px); 
+  height: calc(var(--height)*1px);
+  border-radius: 50%;
+  content: url('../images/site-images/icon_btn_table.svg');
+  transition: .5s;
+  transform: scale(.9);
+  z-index: 3;
+}
+
+.switch-indicate-label input:checked ~ .indicator{
+  left: calc((var(--width) - var(--height))*1px);
+  content: url('../images/site-images/icon_btn_pie.svg');
+}
+
 /*# sourceMappingURL=style.css.map */
