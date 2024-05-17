@@ -3,7 +3,7 @@
         <ul *ngFor="let menu of sidebarMenu; let i = index;" style="position: relative;">
             <li class="nav-item" role="button" [class.active]="isActive === i" (click)="toggleDropdown(i)"
                 data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="mr-2" [ngClass]="menu.iconClass"></i>
+                <i class="me-2" [ngClass]="menu.iconClass"></i>
                 <span>{{menu.title}}</span>
                 <i class="icon-vector-down"></i>
             </li>
@@ -12,7 +12,7 @@
                     <a href="{{item.href}}" [class.disabled]="item.href == null">{{item.title}}</a>
                 </div>
                 <div class="dropdown-content-child" *ngFor="let itemChild of sidebarMenu[i].itemsChild">
-                    <a href="{{itemChild.href}}"><i class="trangle mr-2"></i>{{itemChild.title}}</a>
+                    <a href="{{itemChild.href}}"><i class="trangle me-2"></i>{{itemChild.title}}</a>
                 </div>
             </ng-container>
         </ul>
