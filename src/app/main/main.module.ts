@@ -16,6 +16,10 @@ import { DupontAnalysisComponent } from './financial-analysis/dupont-analysis/du
 import { CashFlowStatementComponent } from './financial-analysis/financial-statements/cash-flow-statement/cash-flow-statement.component';
 import { BalanceSheetComponent } from './financial-analysis/financial-statements/balance-sheet/balance-sheet.component';
 import { IncomeStatementComponent } from './financial-analysis/financial-statements/income-statement/income-statement.component';
+import { RadioBoxComponent } from '../share/radio-box/radio-box.component';
+import { CashFlowForecastComponent } from './fund-scheduling/cash-flow-forecast/cash-flow-forecast.component';
+import { AccountsReceivableAnalysisComponent } from './fund-scheduling/accounts-receivable-analysis/accounts-receivable-analysis.component';
+import { InventoryAnalysisComponent } from './fund-scheduling/inventory-analysis/inventory-analysis.component';
 
 
 @NgModule({
@@ -32,7 +36,11 @@ import { IncomeStatementComponent } from './financial-analysis/financial-stateme
     DupontAnalysisComponent,
     CashFlowStatementComponent,
     BalanceSheetComponent,
-    IncomeStatementComponent
+    IncomeStatementComponent,
+    RadioBoxComponent,
+    CashFlowForecastComponent,
+    AccountsReceivableAnalysisComponent,
+    InventoryAnalysisComponent
   ],
   imports: [
     CommonModule,

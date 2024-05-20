@@ -9,6 +9,9 @@ import { DupontAnalysisComponent } from './financial-analysis/dupont-analysis/du
 import { CashFlowStatementComponent } from './financial-analysis/financial-statements/cash-flow-statement/cash-flow-statement.component';
 import { IncomeStatementComponent } from './financial-analysis/financial-statements/income-statement/income-statement.component';
 import { BalanceSheetComponent } from './financial-analysis/financial-statements/balance-sheet/balance-sheet.component';
+import { CashFlowForecastComponent } from './fund-scheduling/cash-flow-forecast/cash-flow-forecast.component';
+import { AccountsReceivableAnalysisComponent } from './fund-scheduling/accounts-receivable-analysis/accounts-receivable-analysis.component';
+import { InventoryAnalysisComponent } from './fund-scheduling/inventory-analysis/inventory-analysis.component';
 
 const routes: Routes = [
   {
@@ -26,6 +29,13 @@ const routes: Routes = [
               { path: 'balance-sheet', component: BalanceSheetComponent },
               { path: 'cash-flow-statement', component: CashFlowStatementComponent },
           ]}
+        ]
+      },
+      {
+        path: 'fund-scheduling', children: [
+          { path: 'cash-flow-forecast', component: CashFlowForecastComponent },
+          { path: 'accounts-receivable-analysis', component: AccountsReceivableAnalysisComponent },
+          { path: 'inventory-analysis', component: InventoryAnalysisComponent }
         ]
       },
       { path: '', redirectTo: '/main/home', pathMatch: 'full' },
