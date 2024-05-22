@@ -20,6 +20,9 @@ import { RadioBoxComponent } from '../share/radio-box/radio-box.component';
 import { CashFlowForecastComponent } from './fund-scheduling/cash-flow-forecast/cash-flow-forecast.component';
 import { AccountsReceivableAnalysisComponent } from './fund-scheduling/accounts-receivable-analysis/accounts-receivable-analysis.component';
 import { InventoryAnalysisComponent } from './fund-scheduling/inventory-analysis/inventory-analysis.component';
+import { PreInvestmentEvaluationComponent } from './pre-investment-management/pre-investment-evaluation/pre-investment-evaluation.component';
+import { PositionProfitLossMonitorComponent } from './pre-investment-management/position-profit-loss-monitor/position-profit-loss-monitor.component';
+import { InvestmentCompanyComponent } from './pre-investment-management/investment-company/investment-company.component';
 
 
 @NgModule({
@@ -40,7 +43,10 @@ import { InventoryAnalysisComponent } from './fund-scheduling/inventory-analysis
     RadioBoxComponent,
     CashFlowForecastComponent,
     AccountsReceivableAnalysisComponent,
-    InventoryAnalysisComponent
+    InventoryAnalysisComponent,
+    PreInvestmentEvaluationComponent,
+    PositionProfitLossMonitorComponent,
+    InvestmentCompanyComponent
   ],
   imports: [
     CommonModule,

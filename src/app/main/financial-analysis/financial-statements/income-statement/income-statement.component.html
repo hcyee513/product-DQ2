@@ -1,5 +1,5 @@
 <div class="container" style="position: relative;">
-    <div class="row gx-4 ms-6">
+    <div class="row gx-4 ms-xxl-6 mt-3">
         <div class="orange-radio">
             <app-radio-box [radioName]="'年資料'" [id]="'yearData'" [isActive]="selectedRadio === 'yearData'"
                 (click)="selectedRadio = 'yearData'"></app-radio-box>
@@ -17,7 +17,7 @@
             </label>
         </div>
     </div>
-    <section class="row mt-4 ms-6">
+    <section class="row mt-4 ms-xxl-6">
         <ng-container *ngIf="!slideToggle; else pieChart">
             <div class="col-12">
                 <div class="card mt-3">

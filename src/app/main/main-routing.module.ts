@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { MainComponent } from './main.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -12,6 +12,9 @@ import { BalanceSheetComponent } from './financial-analysis/financial-statements
 import { CashFlowForecastComponent } from './fund-scheduling/cash-flow-forecast/cash-flow-forecast.component';
 import { AccountsReceivableAnalysisComponent } from './fund-scheduling/accounts-receivable-analysis/accounts-receivable-analysis.component';
 import { InventoryAnalysisComponent } from './fund-scheduling/inventory-analysis/inventory-analysis.component';
+import { PreInvestmentEvaluationComponent } from './pre-investment-management/pre-investment-evaluation/pre-investment-evaluation.component';
+import { PositionProfitLossMonitorComponent } from './pre-investment-management/position-profit-loss-monitor/position-profit-loss-monitor.component';
+import { InvestmentCompanyComponent } from './pre-investment-management/investment-company/investment-company.component';
 
 const routes: Routes = [
   {
@@ -38,6 +41,12 @@ const routes: Routes = [
           { path: 'inventory-analysis', component: InventoryAnalysisComponent }
         ]
       },
+      {
+        path: 'pre-investment-management', children: [
+          { path: 'pre-investment-evaluation', component: PreInvestmentEvaluationComponent },
+          { path: 'position-profit-loss-monitor', component: PositionProfitLossMonitorComponent },
+          {path: 'investment-company', component: InvestmentCompanyComponent}
+      ]},
       { path: '', redirectTo: '/main/home', pathMatch: 'full' },
       { path: '**', redirectTo: '/main/home' },
     ]
