@@ -40,7 +40,13 @@ export class SidebarComponent implements OnInit {
         { title: '部位損益監控', href: '/main/pre-investment-management/position-profit-loss-monitor' },
         { title: '轉投資公司', href: '/main/pre-investment-management/investment-company' }]
     },
-    { title: '股權籌碼', iconClass: 'icon-coins-light', items: [{ title: '股東結構', href: '' }, { title: '持股分級', href: '' }, { title: '董監持股', href: '' }, { title: '每日法人', href: '' }] },
+    {
+      title: '股權籌碼', iconClass: 'icon-coins-light', items: [
+        { title: '股東結構', href: '/main/equity-chips/shareholder-structure' },
+        { title: '持股分級', href: '/main/equity-chips/shareholding-classification' },
+        { title: '董監持股', href: '/main/equity-chips/directors-supervisors-shareholding' },
+        { title: '每日法人', href: '/main/equity-chips/daily-legal-person' }]
+    },
     { title: '永續專區', iconClass: 'icon-feather-light', items: [{ title: '個股查詢', href: '' }, { title: '彙總查詢', href: '' }] },
     { title: '金融行情', iconClass: 'icon-chart-light', items: [{ title: '全球地圖', href: '' }, { title: '市場報價', href: '' }] },
     { title: '印象總經', iconClass: 'icon-graph-down-light', items: [{ title: '匯價五線譜', href: '' }, { title: 'Fed利率會議', href: '' }, { title: '美國總經地圖', href: '' }] },

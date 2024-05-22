@@ -1,6 +1,6 @@
 <aside id="aside" class="aside" [class.visible]="isSidebarOpen">
-    <div class="container-fluid" *ngIf="isSidebarOpen" style="margin-top: 150px;">
-        <ul *ngFor="let menu of sidebarMenu; let i = index;" style="position: relative;">
+    <div class="container-fluid" *ngIf="isSidebarOpen" style="margin-top: 150px; position: relative;">
+        <ul *ngFor="let menu of sidebarMenu; let i = index;" >
             <li class="nav-item" role="button" [class.active]="isActive === i" (click)="toggleDropdown(i)"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="me-2" [ngClass]="menu.iconClass"></i>
@@ -16,8 +16,16 @@
                 </div>
             </ng-container>
         </ul>
-        <i class="btn icon-bright-switch"></i>
-    </div>
+        <div class="sidebar-switch">
+            <label class="switch-indicate-label-2" style="--width:44;--height:82">
+                <input type="checkbox" >
+                <div class="slide-toggle"></div>
+                <i class="indicator"></i>
+                <i class="icon-bi-sun"></i>
+                <i class="icon-bi-moon"></i>
+            </label>    
+        </div>
+</div>
 </aside>
 <button class="btn icon-arrow-bar-right" [hidden]="isSidebarOpen" (click)="toggleSidebar()"></button>
 <button class="btn icon-arrow-bar-left" [hidden]="!isSidebarOpen" (click)="toggleSidebar()"></button>

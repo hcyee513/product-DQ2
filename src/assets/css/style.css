@@ -12861,6 +12861,26 @@ fieldset:disabled .btn {
   background: url('../images/site-images/icon_non_liabilities_fill.svg');
 }
 
+.icon-bi-sun {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/site-images/icon_bi_sun_fill.svg');
+  z-index: 2;
+}
+
+.icon-bi-moon {
+  position: absolute;
+  left: 10px;
+  top: 50px;
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/site-images/icon_bi_moon_fill.svg');
+  z-index: 2;
+}
+
 .icon-bi-table {
   position: absolute;
   left: 10px;
@@ -13111,18 +13131,18 @@ fieldset:disabled .btn {
   --bs-btn-padding: 10px;
 }
 
-.switch-indicate-label {
+.switch-indicate-label-1 {
   position: relative;
   display: inline-block;
   cursor: pointer;
   appearance: none;
 }
 
-.switch-indicate-label input {
+.switch-indicate-label-1 input {
   display: none;
 }
 
-.switch-indicate-label .slide-toggle {
+.switch-indicate-label-1 .slide-toggle {
   position: relative;
   display: block;
   width: calc(var(--width)*1px);
@@ -13131,7 +13151,7 @@ fieldset:disabled .btn {
   background: rgba(3, 32, 47, 0.2);
 }
 
-.switch-indicate-label .indicator {
+.switch-indicate-label-1 .indicator {
   position: absolute;
   left: 0;
   top: 0;
@@ -13144,9 +13164,52 @@ fieldset:disabled .btn {
   z-index: 3;
 }
 
-.switch-indicate-label input:checked~.indicator {
+.switch-indicate-label-1 input:checked~.indicator {
   left: calc((var(--width) - var(--height))*1px);
   content: url('../images/site-images/icon_btn_pie.svg');
+}
+
+.sidebar-switch {
+  position: absolute;
+  bottom: -300px;
+  left: 50px;
+}
+
+.switch-indicate-label-2 {
+  position: relative;
+  cursor: pointer;
+  appearance: none;
+}
+
+.switch-indicate-label-2 input {
+  display: none;
+}
+
+.switch-indicate-label-2 .slide-toggle {
+  position: relative;
+  display: block;
+  width: calc(var(--width)*1px);
+  height: calc(var(--height)*1px);
+  border-radius: calc(var(--height)*1px);
+  background: rgba(3, 32, 47, 0.2);
+}
+
+.switch-indicate-label-2 .indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(var(--width)*1px);
+  height: calc(var(--width)*1px);
+  border-radius: 50%;
+  content: url('../images/site-images/icon_btn_sun.svg');
+  transition: .5s;
+  transform: scale(.9);
+  z-index: 3;
+}
+
+.switch-indicate-label-2 input:checked~.indicator {
+  top: calc((var(--height) - var(--width))*1px);
+  content: url('../images/site-images/icon_btn_moon.svg');
 }
 
 .plus-btn {
