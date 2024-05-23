@@ -8,7 +8,7 @@
     top: 0;
     left: 0;
     background: linear-gradient(90deg, rgba(44, 38, 32, 0.9) 0%, rgba(32, 29, 24, 0.95) 33.33%, rgba(46, 36, 27, 0.95) 66.67%, rgba(47, 39, 30, 0) 100%);
-    overflow-x: hidden;
+    overflow: hidden;
     /* 這裡好奇怪 */
     transition: 0.5s ease-out;
 }

@@ -23,6 +23,10 @@ import { InventoryAnalysisComponent } from './fund-scheduling/inventory-analysis
 import { PreInvestmentEvaluationComponent } from './pre-investment-management/pre-investment-evaluation/pre-investment-evaluation.component';
 import { PositionProfitLossMonitorComponent } from './pre-investment-management/position-profit-loss-monitor/position-profit-loss-monitor.component';
 import { InvestmentCompanyComponent } from './pre-investment-management/investment-company/investment-company.component';
+import { ShareholderStructureComponent } from './equity-chips/shareholder-structure/shareholder-structure.component';
+import { ShareholdingClassificationComponent } from './equity-chips/shareholding-classification/shareholding-classification.component';
+import { DirectorsSupervisorsShareholdingComponent } from './equity-chips/directors-supervisors-shareholding/directors-supervisors-shareholding.component';
+import { DailyLegalPersonComponent } from './equity-chips/daily-legal-person/daily-legal-person.component';
 
 
 @NgModule({
@@ -46,7 +50,11 @@ import { InvestmentCompanyComponent } from './pre-investment-management/investme
     InventoryAnalysisComponent,
     PreInvestmentEvaluationComponent,
     PositionProfitLossMonitorComponent,
-    InvestmentCompanyComponent
+    InvestmentCompanyComponent,
+    ShareholderStructureComponent,
+    ShareholdingClassificationComponent,
+    DirectorsSupervisorsShareholdingComponent,
+    DailyLegalPersonComponent
   ],
   imports: [
     CommonModule,

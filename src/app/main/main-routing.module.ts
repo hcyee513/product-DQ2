@@ -15,6 +15,10 @@ import { InventoryAnalysisComponent } from './fund-scheduling/inventory-analysis
 import { PreInvestmentEvaluationComponent } from './pre-investment-management/pre-investment-evaluation/pre-investment-evaluation.component';
 import { PositionProfitLossMonitorComponent } from './pre-investment-management/position-profit-loss-monitor/position-profit-loss-monitor.component';
 import { InvestmentCompanyComponent } from './pre-investment-management/investment-company/investment-company.component';
+import { ShareholderStructureComponent } from './equity-chips/shareholder-structure/shareholder-structure.component';
+import { ShareholdingClassificationComponent } from './equity-chips/shareholding-classification/shareholding-classification.component';
+import { DirectorsSupervisorsShareholdingComponent } from './equity-chips/directors-supervisors-shareholding/directors-supervisors-shareholding.component';
+import { DailyLegalPersonComponent } from './equity-chips/daily-legal-person/daily-legal-person.component';
 
 const routes: Routes = [
   {
@@ -46,7 +50,16 @@ const routes: Routes = [
           { path: 'pre-investment-evaluation', component: PreInvestmentEvaluationComponent },
           { path: 'position-profit-loss-monitor', component: PositionProfitLossMonitorComponent },
           {path: 'investment-company', component: InvestmentCompanyComponent}
-      ]},
+        ]
+      },
+      {
+        path: 'equity-chips', children: [
+          { path: 'shareholder-structure', component: ShareholderStructureComponent },
+          { path: 'shareholding-classification', component: ShareholdingClassificationComponent },
+          { path: 'directors-supervisors-shareholding', component: DirectorsSupervisorsShareholdingComponent },
+          { path: 'daily-legal-person', component: DailyLegalPersonComponent }
+        ]
+      },
       { path: '', redirectTo: '/main/home', pathMatch: 'full' },
       { path: '**', redirectTo: '/main/home' },
     ]
