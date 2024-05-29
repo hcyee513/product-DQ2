@@ -2588,7 +2588,7 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 16px 12px;
-    }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .form-select {
@@ -4878,8 +4878,6 @@ fieldset:disabled .btn {
   background-clip: border-box;
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
-  /* max-height: 245px;
-  min-width: 200px; */
 }
 
 .card>hr {
@@ -12968,9 +12966,17 @@ fieldset:disabled .btn {
   cursor: pointer;
 }
 
+.icon-calendar-month {
+  width: 44px;
+  height: 44px;
+  background: url('../images/site-images/icon_calendar_month.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
 .other-page {
   min-height: 1080px;
-  background-image: url('https://s3-alpha-sig.figma.com/img/9d4b/eaae/0fa731427675e6e5286bd24c86aff943?Expires=1716768000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=X69ALRKzppBLYw6QVDcsC-opBIKgBC2cu67l0i-O~IJz63QP752FYWMNiGhkajj8ZkoNIMd8tQ2QS6EaGCZ-sXbfKaFm0POdvJ9Ccl3roNZhZfnam~u-Aj3DErJ29~1LwGPyK4YEdfBb0yvPvuGnN5DOPtMBJChd0MNUefvD2bko2Lc4PjLhG9LCS23G0UlW8YL0zPjD6ptn5vDhjM5AcojECIijFy15Kad-ZfAoR4IKHu-zlZR6S1cfZd31KJyjB907N9eRJiZgZs9QNEzVsp5jkTXgBxrP7wFj6EvTUBiRDNP16kzxaAtRD8gtZpuRw8DpThxwKO7a72JEDP7j~w__');
+  background-image: url('https://s3-alpha-sig.figma.com/img/9d4b/eaae/0fa731427675e6e5286bd24c86aff943?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Pn0TbjNKhJnoJiS~COrHo-WMV0ydN30c9YWUUT5zDtSsp0L51qycdCWVUFOIznAi5kJaT0rAGWKq0ZP82NmrtUU8fJXkzVCwObq3sl3SbQey-~6Rivdvi4kPsWt~WTc~E~b4hxv6JGbcAN-pwL226lLhv1GLH7uRv8kpWPud4e-4S~zHTbtdtGtjDNfq7rfHmMIxeQTVgbVjkK4-Q9gbYIq6MK2tyTcu-TFuwDgSkCzub2AJg7jknv3BYicsr1HMKy4BvsNMzhoO-783Z-xuFhyoPy7AyRytPJKqF17bYxLe3dQt55GdGY3kdnVhQhZ1pjy4bP4PS3HOL1E9-x-Q~g__');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13302,4 +13308,130 @@ fieldset:disabled .btn {
   color: var(--bs-orange);
 }
 
+.card .card-body hr {
+  border: 0;
+  border-top: 5px solid var(--bs-brown);
+}
+
+.card .card-body h6 {
+  color: var(--bs-brown);
+}
+
+.card .card-body span {
+  font-family: PingFang TC;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: rgba(139, 159, 188, 1);
+}
+
+.custom-input {
+  position: relative;
+  background-color: rgba(39, 51, 71, 0.8);
+  border: 1px solid var(--bs-orange);
+  border-radius: 5px;
+}
+
+.custom-input input {
+  width: 100%;
+  border: none;
+  color: white !important;
+  padding: 0 20px;
+}
+
+.custom-input label {
+  color: var(--bs-orange);
+  padding: 10px;
+}
+
+.custom-input button {
+  color: var(--bs-blue-3);
+  border: 1px solid var(--bs-orange);
+  width: 60px;
+  height: 40px;
+  padding: 5px 10px 5px 10px;
+  background-color: var(--bs-orange);
+  margin: 10px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.custom-input img {
+  position: absolute;
+  top: -70px;
+  right: -60px;
+}
+
+.draft-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100%;
+  background: linear-gradient(94.79deg, rgba(1, 19, 29, 0.7) 0%, rgba(1, 19, 29, 0.6) 100%);
+  box-shadow: 0px 0px 16px 0px rgba(139, 159, 188, 0.07);
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-family: PingFang TC;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.nav-bar {
+  display: inline-block;
+  font-family: PingFang TC;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: rgba(229, 234, 242, 1);
+  border-bottom: 1px solid rgba(255, 168, 0, 1);
+}
+
+.nav-bar .nav-item .nav-link {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 5px;
+}
+
+.nav-bar .nav-item .nav-link.active {
+  background-color: rgba(255, 168, 0, 1);
+  color: rgba(39, 51, 71, 1);
+  position: relative;
+}
+
+.nav-bar .nav-item .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 48%;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 5px solid rgba(39, 51, 71, 1);
+  display: inline-block;
+}
+
+.nav-item a:hover,
+.nav-item a.active {
+  color: rgba(255, 168, 0, 1);
+}
+
+.draft-card .nav-bar .nav .nav-item {
+  flex-grow: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.calendar {
+  display: inline-block;
+  vertical-align: top;
+  color: var(--bs-orange);
+  padding: 5px 0;
+}
 /*# sourceMappingURL=style.css.map */

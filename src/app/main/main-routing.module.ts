@@ -19,6 +19,8 @@ import { ShareholderStructureComponent } from './equity-chips/shareholder-struct
 import { ShareholdingClassificationComponent } from './equity-chips/shareholding-classification/shareholding-classification.component';
 import { DirectorsSupervisorsShareholdingComponent } from './equity-chips/directors-supervisors-shareholding/directors-supervisors-shareholding.component';
 import { DailyLegalPersonComponent } from './equity-chips/daily-legal-person/daily-legal-person.component';
+import { AiSpokerComponent } from './ai-news/ai-spoker/ai-spoker.component';
+import { NewsGuideComponent } from './ai-news/news-guide/news-guide.component';
 
 const routes: Routes = [
   {
@@ -58,6 +60,12 @@ const routes: Routes = [
           { path: 'shareholding-classification', component: ShareholdingClassificationComponent },
           { path: 'directors-supervisors-shareholding', component: DirectorsSupervisorsShareholdingComponent },
           { path: 'daily-legal-person', component: DailyLegalPersonComponent }
+        ]
+      }, 
+      {
+        path: 'ai-news', children: [
+          { path: 'ai-spoker', component: AiSpokerComponent },
+          { path: 'news-guide', component: NewsGuideComponent }
         ]
       },
       { path: '', redirectTo: '/main/home', pathMatch: 'full' },

@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="row gx-4 mt-3">
+        <div class="col-lg-6">
+            <div class="ms-xxl-6">
+                <app-drop-down-list [labelName]="'請選擇分類'"></app-drop-down-list>
+                <app-drop-down-list [labelName]="'請輸入個股'"></app-drop-down-list>
+            </div>
+            <div class="gx-6 ms-xxl-6 mt-4">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <th scope="col">時間</th>
+                                <th scope="col">分類</th>
+                                <th class="text-start" scope="col">標題</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="text-center" scope="row">2024/12/24</th>
+                                    <td class="text-center">國際股市</td>
+                                    <td class="text-start">DJ研華財年淨利潤新台幣108.40億元，上年同期新台幣107.60億元</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <hr>
+                        <div class="d-flex flex-column">
+                            <h6>《產業》台積電台中二期廠2027年完工 盧秀燕掛保證：不缺水電</h6>
+                            <span>2024/02/27 15:42:39</span>
+                            <div class="mt-2">
+                                <p>【時報-台北電】台積電日本熊本廠日前風光開幕，在台中擴建二期也已定案。台中市長盧秀燕27日宣布，台積電台中二期廠的都市計畫變更案已獲內政部同意，市府將公告實施，預計2027年完工、年產值可達5000億元，增加4500個就業機會。她並強調，台水、台電掛保證台中優先供水、電，不用擔心台積電進駐導致缺水、缺電。
+                                    台積電熊本廠日前風光開幕，引發全球矚目。盧秀燕今天在市政會議中表示，台積電滿因應全球供應鏈需求，在台中擴建二期，該都市計畫變更程序告一段落，內政部已同意都計變更，將由中市府公告發布實施。
+                                    盧秀燕表示，台積電台中擴建二期定案，一期3廠、二期有4個12吋晶圓廠，製程2奈米以下，預計2027年完工。估計產值年5000億元，約增加4500個就業機會，相關產業年產值高達1.2兆。
+                                    「別擔心缺水、缺電！」盧秀燕表示，台積電熊本廠興建速度很有效率，相信台中二期速度也會非常快。至於熊本廠有缺水問題，盧秀燕強調，早獲台水、台電公文保證，優先供應台中水電，台中不會因為台積電二廠進駐而缺水電。（新聞來源：中時即時
+                                    陳淑芬
+                                    實習洪韻筑）台積電熊本廠日前風光開幕，引發全球矚目。盧秀燕今天在市政會議中表示，台積電滿因應全球供應鏈需求，在台中擴建二期，該都市計畫變更程序告一段落，內政部已同意都計變更，將由中市府公告發布實施。
+                                    盧秀燕表示，台積電台中擴建二期定案，一期3廠、二期有4個12吋晶圓廠，製程2奈米以下，預計2027年完工。估計產值年5000億元，約增加4500個就業機會，相關產業年產值高達1.2兆。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6" style="display: flex;flex-direction: column;">
+            <div class="gx-4 mt-3">
+                <div class="custom-input" style="position: relative;">
+                    <label for="floatingInputGrid">請輸入問題描述：</label>
+                    <input type="text" class="form-control" id="floatingInputGrid">
+                    <button>查詢</button>
+                    <img src="../../../../assets/images/site-images/ai_spoker.png" class="img-fluid"
+                        style="height: 280px;" alt="">
+                </div>
+            </div>
+            <div class="gx-4 mt-4" style="flex-grow: 1;">
+                <div class="draft-card">
+                    <div class="nav-bar">
+                        <ul class="nav justify-content-around">
+                            <li class="nav-item">
+                                <a class="nav-link active">草稿1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">草稿2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">草稿3</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-2" >
+                        <p >
+                            台積電台中二期廠通過都市計畫變更，預計2027年完工，年產值可達5000億元，增加4500個就業機會。台水、台電也掛保證台中優先供水、電，不用擔心台積電進駐導致缺水、缺電。
+                            此消息對台積電、台中市、台灣半導體產業皆是利多。台積電可擴充產能，鞏固其全球晶圓代工龍頭地位；台中市可增加就業機會、促進經濟發展；台灣半導體產業可持續升級。
+                            台積電財務長應審慎評估台積電台中二期廠的營運成本、獲利能力、對整體產業的影響等，並做好因應措施，以確保台積電的長期發展。
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-sidebar></app-sidebar>

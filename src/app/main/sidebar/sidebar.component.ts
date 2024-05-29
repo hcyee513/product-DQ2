@@ -50,7 +50,11 @@ export class SidebarComponent implements OnInit {
     { title: '永續專區', iconClass: 'icon-feather-light', items: [{ title: '個股查詢', href: '' }, { title: '彙總查詢', href: '' }] },
     { title: '金融行情', iconClass: 'icon-chart-light', items: [{ title: '全球地圖', href: '' }, { title: '市場報價', href: '' }] },
     { title: '印象總經', iconClass: 'icon-graph-down-light', items: [{ title: '匯價五線譜', href: '' }, { title: 'Fed利率會議', href: '' }, { title: '美國總經地圖', href: '' }] },
-    { title: 'AI新聞眼', iconClass: 'icon-ai-light', items: [{ title: 'AI發言人', href: '' }, { title: '新聞導覽', href: '' }] },
+    {
+      title: 'AI新聞眼', iconClass: 'icon-ai-light', items: [
+        { title: 'AI發言人', href: '/main/ai-news/ai-spoker' },
+        { title: '新聞導覽', href: '/main/ai-news/news-guide' }]
+    },
   ]
 
   constructor(private headerService: HeaderService) { }

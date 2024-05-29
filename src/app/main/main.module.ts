@@ -27,6 +27,10 @@ import { ShareholderStructureComponent } from './equity-chips/shareholder-struct
 import { ShareholdingClassificationComponent } from './equity-chips/shareholding-classification/shareholding-classification.component';
 import { DirectorsSupervisorsShareholdingComponent } from './equity-chips/directors-supervisors-shareholding/directors-supervisors-shareholding.component';
 import { DailyLegalPersonComponent } from './equity-chips/daily-legal-person/daily-legal-person.component';
+import { IndividualSearchComponent } from './sustainability-zone/individual-search/individual-search.component';
+import { SummarySearchComponent } from './sustainability-zone/summary-search/summary-search.component';
+import { AiSpokerComponent } from './ai-news/ai-spoker/ai-spoker.component';
+import { NewsGuideComponent } from './ai-news/news-guide/news-guide.component';
 
 
 @NgModule({
@@ -54,7 +58,11 @@ import { DailyLegalPersonComponent } from './equity-chips/daily-legal-person/dai
     ShareholderStructureComponent,
     ShareholdingClassificationComponent,
     DirectorsSupervisorsShareholdingComponent,
-    DailyLegalPersonComponent
+    DailyLegalPersonComponent,
+    IndividualSearchComponent,
+    SummarySearchComponent,
+    AiSpokerComponent,
+    NewsGuideComponent
   ],
   imports: [
     CommonModule,
