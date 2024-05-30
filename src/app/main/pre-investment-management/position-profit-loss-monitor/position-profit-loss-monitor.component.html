@@ -1,5 +1,5 @@
 <div class="container">
-    <section class="row gx-4 ms-xxl-6 mt-3">
+    <div class="ms-xxl-6 mt-3">
         <div class="orange-radio">
             <app-radio-box [radioName]="'股票'" [id]="'stock'" [isActive]="selectedRadio === 'stock'"
                 (click)="selectedRadio = 'stock'"></app-radio-box>
@@ -10,96 +10,96 @@
             <app-radio-box [radioName]="'基金'" [id]="'fund'" [isActive]="selectedRadio === 'fund'"
                 (click)="selectedRadio = 'fund'"></app-radio-box>
         </div>
-    </section>
-    <section class="row gx-4 ms-xxl-6 mt-4 d-flex">
-        <h5>已實現損益</h5>
-        <div class="col-md-2-2">
-            <div class="card mt-4">
-                <div class="card-body card-green">
-                    <div class="card-title">
-                        <div class="card-title-3 position-relative">本月</div>
+        <div class="row gx-4 mt-4 d-flex">
+            <h5>已實現損益</h5>
+            <div class="col-md-2-2">
+                <div class="card mt-4">
+                    <div class="card-body card-green">
+                        <div class="card-title">
+                            <div class="card-title-3 position-relative">本月</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="d-flex justify-content-center my-5">4,793,500</div>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <div class="d-flex justify-content-center my-5">4,793,500</div>
+                </div>
+            </div>
+            <div class="col-md-2-2">
+                <div class="card mt-4">
+                    <div class="card-body card-yellow">
+                        <div class="card-title">
+                            <div class="card-title-3 position-relative">本季</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="d-flex justify-content-center my-5">36,412,800</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2-2">
+                <div class="card mt-4">
+                    <div class="card-body card-purple">
+                        <div class="card-title">
+                            <div class="card-title-3 position-relative">今年</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="d-flex justify-content-center my-5">154,946,900</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="card mt-4">
+                    <div class="card-body">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-2-2">
-            <div class="card mt-4">
-                <div class="card-body card-yellow">
-                    <div class="card-title">
-                        <div class="card-title-3 position-relative">本季</div>
-                    </div>
-                    <div class="card-content">
-                        <div class="d-flex justify-content-center my-5">36,412,800</div>
+        <div class="row gx-4 mt-4 d-flex">
+            <h5>未實現損益</h5>
+            <div class="col-12">
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <th class="p-1 text-center" scope="col">股票代號</th>
+                                <th class="p-1 text-start" scope="col">股票名稱</th>
+                                <th class="p-1 text-end" scope="col">持有股數</th>
+                                <th class="p-1 text-end" scope="col">總投入成本</th>
+                                <th class="p-1 text-end" scope="col">均價</th>
+                                <th class="p-1 text-end" scope="col">市價</th>
+                                <th class="p-1 text-end" scope="col">未實現損益</th>
+                                <th class="p-1 text-center" scope="col">報酬率</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="text-center" scope="row">2603</th>
+                                    <td class="text-start">長榮</td>
+                                    <td class="text-end">601</td>
+                                    <td class="text-end">100%</td>
+                                    <td class="text-end">182</td>
+                                    <td class="text-end">1,059</td>
+                                    <td class="text-end">601</td>
+                                    <td class="text-center">40%</td>
+                                </tr>
+                            </tbody>
+                            <tfoot class="table-blue">
+                                <tr>
+                                    <th class="text-center" scope="row">合計</th>
+                                    <td class="text-start"></td>
+                                    <td class="text-end"></td>
+                                    <td class="text-end">4,198,112,000</td>
+                                    <td class="text-end"></td>
+                                    <td class="text-end"></td>
+                                    <td class="text-end">865,942,634</td>
+                                    <td class="text-center">24.63%</td>
+                                </tr>
+                            </tfoot>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-2-2">
-            <div class="card mt-4">
-                <div class="card-body card-purple">
-                    <div class="card-title">
-                        <div class="card-title-3 position-relative">今年</div>
-                    </div>
-                    <div class="card-content">
-                        <div class="d-flex justify-content-center my-5">154,946,900</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-5">
-            <div class="card mt-4">
-                <div class="card-body">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="row gx-4 ms-xxl-6 mt-4 d-flex">
-        <h5>未實現損益</h5>
-        <div class="col-12">
-            <div class="card mt-4">
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                            <th class="p-1 text-center" scope="col">股票代號</th>
-                            <th class="p-1 text-start" scope="col">股票名稱</th>
-                            <th class="p-1 text-end" scope="col">持有股數</th>
-                            <th class="p-1 text-end" scope="col">總投入成本</th>
-                            <th class="p-1 text-end" scope="col">均價</th>
-                            <th class="p-1 text-end" scope="col">市價</th>
-                            <th class="p-1 text-end" scope="col">未實現損益</th>
-                            <th class="p-1 text-center" scope="col">報酬率</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th class="text-center" scope="row">2603</th>
-                                <td class="text-start">長榮</td>
-                                <td class="text-end">601</td>
-                                <td class="text-end">100%</td>
-                                <td class="text-end">182</td>
-                                <td class="text-end">1,059</td>
-                                <td class="text-end">601</td>
-                                <td class="text-center">40%</td>
-                            </tr>
-                        </tbody>
-                        <tfoot class="table-blue">
-                            <tr>
-                                <th class="text-center" scope="row">合計</th>
-                                <td class="text-start"></td>
-                                <td class="text-end"></td>
-                                <td class="text-end">4,198,112,000</td>
-                                <td class="text-end"></td>
-                                <td class="text-end"></td>
-                                <td class="text-end">865,942,634</td>
-                                <td class="text-center">24.63%</td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 </div>
 <app-sidebar></app-sidebar>
