@@ -13084,7 +13084,7 @@ fieldset:disabled .btn {
 
 .card-purple {
   color: var(--bs-purple-1);
-  --color: var(--bs-purple-2);
+  --color: var(--bs-purple-1);
   --line-color: var(--bs-purple-1);
 }
 

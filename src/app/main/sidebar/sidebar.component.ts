@@ -74,4 +74,8 @@ export class SidebarComponent implements OnInit {
     }
   }
 
+  public onItemClicked(title: string) {
+    this.headerService.changeTitle(title);
+  }
+
 }

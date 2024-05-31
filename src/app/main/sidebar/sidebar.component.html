@@ -9,7 +9,7 @@
             </li>
             <ng-container *ngIf="isActive === i">
                 <div class="dropdown-content" *ngFor="let item of sidebarMenu[i].items">
-                    <a href="{{item.href}}" [class.disabled]="item.href == null">{{item.title}}</a>
+                    <a href="{{item.href}}" [class.disabled]="item.href == null" (click)="onItemClicked(item.title)">{{item.title}}</a>
                 </div>
                 <div class="dropdown-content-child" *ngFor="let itemChild of sidebarMenu[i].itemsChild">
                     <a href="{{itemChild.href}}"><i class="trangle me-2"></i>{{itemChild.title}}</a>

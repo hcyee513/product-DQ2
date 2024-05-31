@@ -1,3 +1,5 @@
+import { Subscription } from 'rxjs';
+import { HeaderService } from './header.service';
 import { Component, HostListener, OnInit } from '@angular/core';
 
 
@@ -8,14 +10,21 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  public title: string = '戰情室'; 
+  private subscription!: Subscription;
+
+  public title: string = '';
   public isNavPanelOpen: boolean = false;
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.checkIsMobileView();
   }
 
-  constructor() { }
+  constructor(private headerService: HeaderService) {
+    this.subscription = this.headerService.currentTitle.subscribe(title => {
+      this.title = title;
+      console.log(this.title)
+    })
+  }
 
   ngOnInit(): void {
   }
@@ -28,5 +37,13 @@ export class HeaderComponent implements OnInit {
 
   public toggleNavPanel() {
     this.isNavPanelOpen = !this.isNavPanelOpen;
+  }
+
+  public onItemTitleClick(title: string) {
+    console.log(title)
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }
