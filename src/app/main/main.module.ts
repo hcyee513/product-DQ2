@@ -9,14 +9,12 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MainRoutingModule } from './main-routing.module';
 import { SituationRoomComponent } from './financial-analysis/situation-room/situation-room.component';
-import { DropDownListComponent } from '../share/drop-down-list/drop-down-list.component';
 import { ProfitLossAnalysisComponent } from './financial-analysis/profit-loss-analysis/profit-loss-analysis.component';
 import { AssetLiabilityAnalysisComponent } from './financial-analysis/asset-liability-analysis/asset-liability-analysis.component';
 import { DupontAnalysisComponent } from './financial-analysis/dupont-analysis/dupont-analysis.component';
 import { CashFlowStatementComponent } from './financial-analysis/financial-statements/cash-flow-statement/cash-flow-statement.component';
 import { BalanceSheetComponent } from './financial-analysis/financial-statements/balance-sheet/balance-sheet.component';
 import { IncomeStatementComponent } from './financial-analysis/financial-statements/income-statement/income-statement.component';
-import { RadioBoxComponent } from '../share/radio-box/radio-box.component';
 import { CashFlowForecastComponent } from './fund-scheduling/cash-flow-forecast/cash-flow-forecast.component';
 import { AccountsReceivableAnalysisComponent } from './fund-scheduling/accounts-receivable-analysis/accounts-receivable-analysis.component';
 import { InventoryAnalysisComponent } from './fund-scheduling/inventory-analysis/inventory-analysis.component';
@@ -31,6 +29,10 @@ import { IndividualSearchComponent } from './sustainability-zone/individual-sear
 import { SummarySearchComponent } from './sustainability-zone/summary-search/summary-search.component';
 import { AiSpokerComponent } from './ai-news/ai-spoker/ai-spoker.component';
 import { NewsGuideComponent } from './ai-news/news-guide/news-guide.component';
+import { ShareModule } from '../share/share.module';
+import { ExchangeRateLineComponent } from './economy/exchange-rate-line/exchange-rate-line.component';
+import { FederalFundsRateComponent } from './economy/federal-funds-rate/federal-funds-rate.component';
+import { UsOverallEconomyMapComponent } from './economy/us-overall-economy-map/us-overall-economy-map.component';
 
 
 @NgModule({
@@ -41,14 +43,12 @@ import { NewsGuideComponent } from './ai-news/news-guide/news-guide.component';
     FooterComponent,
     SidebarComponent,
     SituationRoomComponent,
-    DropDownListComponent,
     ProfitLossAnalysisComponent,
     AssetLiabilityAnalysisComponent,
     DupontAnalysisComponent,
     CashFlowStatementComponent,
     BalanceSheetComponent,
     IncomeStatementComponent,
-    RadioBoxComponent,
     CashFlowForecastComponent,
     AccountsReceivableAnalysisComponent,
     InventoryAnalysisComponent,
@@ -62,13 +62,17 @@ import { NewsGuideComponent } from './ai-news/news-guide/news-guide.component';
     IndividualSearchComponent,
     SummarySearchComponent,
     AiSpokerComponent,
-    NewsGuideComponent
+    NewsGuideComponent,
+    ExchangeRateLineComponent,
+    FederalFundsRateComponent,
+    UsOverallEconomyMapComponent
   ],
   imports: [
     CommonModule,
     NgbModule,
     RouterModule,
-    MainRoutingModule
+    MainRoutingModule,
+    ShareModule
   ]
 })
 export class MainModule { }

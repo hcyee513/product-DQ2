@@ -21,6 +21,9 @@ import { DirectorsSupervisorsShareholdingComponent } from './equity-chips/direct
 import { DailyLegalPersonComponent } from './equity-chips/daily-legal-person/daily-legal-person.component';
 import { AiSpokerComponent } from './ai-news/ai-spoker/ai-spoker.component';
 import { NewsGuideComponent } from './ai-news/news-guide/news-guide.component';
+import { ExchangeRateLineComponent } from './economy/exchange-rate-line/exchange-rate-line.component';
+import { FederalFundsRateComponent } from './economy/federal-funds-rate/federal-funds-rate.component';
+import { UsOverallEconomyMapComponent } from './economy/us-overall-economy-map/us-overall-economy-map.component';
 
 const routes: Routes = [
   {
@@ -62,6 +65,13 @@ const routes: Routes = [
           { path: 'daily-legal-person', component: DailyLegalPersonComponent }
         ]
       }, 
+      {
+        path: 'economy', children: [
+          { path: 'exchange-rate-line', component: ExchangeRateLineComponent },
+          { path: 'federal-funds-rate', component: FederalFundsRateComponent },
+          { path: 'us-overall-economy-map', component: UsOverallEconomyMapComponent }
+        ]
+      },
       {
         path: 'ai-news', children: [
           { path: 'ai-spoker', component: AiSpokerComponent },

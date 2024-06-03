@@ -1,0 +1,40 @@
+.card-title-1 {
+    font-size: 22px;
+}
+
+table thead,
+table th,
+table td{
+    border: 0;
+    font-family: PingFang TC;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table thead {
+    background-color: white;
+}
+
+table .th1 {
+    color: rgba(198, 140, 29, 1) !important;
+    font-size: 14px !important;
+}
+
+table thead th {
+    font-size: 24px;
+    line-height: 36px;
+    color: rgba(39, 51, 71, 1);
+}
+
+table tbody td {
+    text-align: center;
+}
+
+.card-content p {
+    font-family: PingFang TC;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(39, 51, 71, 1);
+}
