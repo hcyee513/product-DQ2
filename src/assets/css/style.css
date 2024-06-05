@@ -376,6 +376,7 @@ th {
   text-align: -webkit-match-parent;
   font-size: 14px;
   text-align: center;
+  border: 0;
 }
 
 thead {
@@ -399,6 +400,10 @@ td,
 th {
   font-family: PingFang TC;
   line-height: 21px;
+}
+
+td {
+  border: 0;
 }
 
 label {
@@ -2098,6 +2103,7 @@ progress {
   color: var(--bs-table-color);
   vertical-align: top;
   border-color: var(--bs-table-border-color);
+  border: 0;
 }
 
 .table> :not(caption)>*>* {
@@ -12986,16 +12992,6 @@ fieldset:disabled .btn {
   cursor: pointer;
 }
 
-.other-page {
-  position: relative;
-  min-height: 1080px;
-  background-image: url('https://s3-alpha-sig.figma.com/img/9d4b/eaae/0fa731427675e6e5286bd24c86aff943?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Pn0TbjNKhJnoJiS~COrHo-WMV0ydN30c9YWUUT5zDtSsp0L51qycdCWVUFOIznAi5kJaT0rAGWKq0ZP82NmrtUU8fJXkzVCwObq3sl3SbQey-~6Rivdvi4kPsWt~WTc~E~b4hxv6JGbcAN-pwL226lLhv1GLH7uRv8kpWPud4e-4S~zHTbtdtGtjDNfq7rfHmMIxeQTVgbVjkK4-Q9gbYIq6MK2tyTcu-TFuwDgSkCzub2AJg7jknv3BYicsr1HMKy4BvsNMzhoO-783Z-xuFhyoPy7AyRytPJKqF17bYxLe3dQt55GdGY3kdnVhQhZ1pjy4bP4PS3HOL1E9-x-Q~g__');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
 .title {
   font-family: PingFang TC;
   font-size: 40px;
@@ -13457,6 +13453,25 @@ fieldset:disabled .btn {
   .custom-input {
     margin-top: 100px;
   }
+}
+
+/* sidebar本體 */
+.aside {
+  width: 0;
+  height: 100%; 
+  padding-right: 80px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, rgba(44, 38, 32, 0.9) 0%, rgba(32, 29, 24, 0.95) 33.33%, rgba(46, 36, 27, 0.95) 66.67%, rgba(47, 39, 30, 0) 100%);
+  overflow: hidden;
+  /* 這裡好奇怪 */
+  transition: 0.5s ease-out;
+}
+
+.aside.visible {
+  width: 380px;
 }
 
 /*# sourceMappingURL=style.css.map */

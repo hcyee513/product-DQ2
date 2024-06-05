@@ -12,6 +12,7 @@ export class SidebarComponent implements OnInit {
 
   public isSidebarOpen: boolean = false;
   public isActive: number | null = null;
+  public showChild: boolean = false;
 
   public sidebarMenu: Menu[] = [
     {
@@ -42,20 +43,29 @@ export class SidebarComponent implements OnInit {
     },
     {
       title: '股權籌碼', iconClass: 'icon-coins-light', items: [
-        { title: '股東結構', href: '/main/equity-chips/shareholder-structure' },
+        { title: '股權結構', href: '/main/equity-chips/shareholder-structure' },
         { title: '持股分級', href: '/main/equity-chips/shareholding-classification' },
         { title: '董監持股', href: '/main/equity-chips/directors-supervisors-shareholding' },
         { title: '每日法人', href: '/main/equity-chips/daily-legal-person' }]
     },
     { title: '永續專區', iconClass: 'icon-feather-light', items: [{ title: '個股查詢', href: '' }, { title: '彙總查詢', href: '' }] },
     { title: '金融行情', iconClass: 'icon-chart-light', items: [{ title: '全球地圖', href: '' }, { title: '市場報價', href: '' }] },
-    { title: '印象總經', iconClass: 'icon-graph-down-light', items: [{ title: '匯價五線譜', href: '' }, { title: 'Fed利率會議', href: '' }, { title: '美國總經地圖', href: '' }] },
+    {
+      title: '印象總經', iconClass: 'icon-graph-down-light', items: [
+        { title: '匯價五線譜', href: '/main/economy/exchange-rate-line' },
+        { title: 'Fed利率會議', href: '/main/economy/federal-funds-rate' },
+        { title: '美國總經地圖', href: '/main/economy/us-overall-economy-map' }]
+    },
     {
       title: 'AI新聞眼', iconClass: 'icon-ai-light', items: [
         { title: 'AI發言人', href: '/main/ai-news/ai-spoker' },
         { title: '新聞導覽', href: '/main/ai-news/news-guide' }]
     },
   ]
+
+  /** 初始是淺色 */
+  private modeKey = 'colorMode';
+  @Output() colorMode: EventEmitter<boolean> = new EventEmitter<boolean>(false);
 
   constructor(private headerService: HeaderService) { }
 
@@ -74,8 +84,19 @@ export class SidebarComponent implements OnInit {
     }
   }
 
+  public toggleDropdownChild(item: any) {
+    this.showChild = !this.showChild;
+
+  }
+
   public onItemClicked(title: string) {
     this.headerService.changeTitle(title);
+  }
+
+  public changeMode(isChecked: boolean) {
+    // true = 深色
+    this.colorMode.emit(isChecked);
+    localStorage.setItem(this.modeKey, JSON.stringify(isChecked));
   }
 
 }
