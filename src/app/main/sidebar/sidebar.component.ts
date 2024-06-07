@@ -48,7 +48,11 @@ export class SidebarComponent implements OnInit {
         { title: '董監持股', href: '/main/equity-chips/directors-supervisors-shareholding' },
         { title: '每日法人', href: '/main/equity-chips/daily-legal-person' }]
     },
-    { title: '永續專區', iconClass: 'icon-feather-light', items: [{ title: '個股查詢', href: '' }, { title: '彙總查詢', href: '' }] },
+    {
+      title: '永續專區', iconClass: 'icon-feather-light', items: [
+        { title: '個股查詢', href: '/main/sustainability-zone/individual-search' },
+        { title: '彙總查詢', href: '/main/sustainability-zone/summary-search' }]
+    },
     { title: '金融行情', iconClass: 'icon-chart-light', items: [{ title: '全球地圖', href: '' }, { title: '市場報價', href: '' }] },
     {
       title: '印象總經', iconClass: 'icon-graph-down-light', items: [

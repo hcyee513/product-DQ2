@@ -25,14 +25,14 @@ import { ShareholderStructureComponent } from './equity-chips/shareholder-struct
 import { ShareholdingClassificationComponent } from './equity-chips/shareholding-classification/shareholding-classification.component';
 import { DirectorsSupervisorsShareholdingComponent } from './equity-chips/directors-supervisors-shareholding/directors-supervisors-shareholding.component';
 import { DailyLegalPersonComponent } from './equity-chips/daily-legal-person/daily-legal-person.component';
-import { IndividualSearchComponent } from './sustainability-zone/individual-search/individual-search.component';
-import { SummarySearchComponent } from './sustainability-zone/summary-search/summary-search.component';
+// import { IndividualSearchComponent } from './sustainability-zone/individual-search/individual-search.component';
+// import { SummarySearchComponent } from './sustainability-zone/summary-search/summary-search.component';
 import { AiSpokerComponent } from './ai-news/ai-spoker/ai-spoker.component';
 import { NewsGuideComponent } from './ai-news/news-guide/news-guide.component';
-import { ShareModule } from '../share/share.module';
 import { ExchangeRateLineComponent } from './economy/exchange-rate-line/exchange-rate-line.component';
 import { FederalFundsRateComponent } from './economy/federal-funds-rate/federal-funds-rate.component';
 import { UsOverallEconomyMapComponent } from './economy/us-overall-economy-map/us-overall-economy-map.component';
+import { ShareModule } from '../share/share.module';
 
 
 @NgModule({
@@ -59,8 +59,8 @@ import { UsOverallEconomyMapComponent } from './economy/us-overall-economy-map/u
     ShareholdingClassificationComponent,
     DirectorsSupervisorsShareholdingComponent,
     DailyLegalPersonComponent,
-    IndividualSearchComponent,
-    SummarySearchComponent,
+    // IndividualSearchComponent,
+    // SummarySearchComponent,
     AiSpokerComponent,
     NewsGuideComponent,
     ExchangeRateLineComponent,

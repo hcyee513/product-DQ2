@@ -8,19 +8,28 @@ import { Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
 
-  public headerHidden: boolean = false;
+  public hidden: boolean = false;
 
   constructor(private router: Router) {
     this.router.events.subscribe((val) => {
       if (this.router.url === '/main/home') {
-        this.headerHidden = true;
+        this.hidden = true;
       } else {
-        this.headerHidden = false;
+        this.hidden = false;
       }
     })
    }
 
   ngOnInit(): void {
+  }
+
+  public onModeChange(isClicked: boolean) {
+    var body = document.body;
+    if (body.hasAttribute('data-bs-theme') && !isClicked) {
+        body.removeAttribute('data-bs-theme');
+    } else {
+        body.setAttribute('data-bs-theme', 'dark');
+    }
   }
 
 

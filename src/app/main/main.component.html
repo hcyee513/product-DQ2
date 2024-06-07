@@ -1,5 +1,6 @@
-<div class="other-page">
-<app-header [hidden]="headerHidden"></app-header>
+<div id="page-wrapper">
+    <app-header [hidden]="hidden"></app-header>
     <router-outlet></router-outlet>
-<app-footer></app-footer>
+    <app-footer></app-footer>
+    <app-sidebar [hidden]="hidden" (colorMode)="onModeChange($event)"></app-sidebar>
 </div>
