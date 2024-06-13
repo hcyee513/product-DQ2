@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { DropDownListComponent } from './drop-down-list/drop-down-list.component';
 import { RadioBoxComponent } from './radio-box/radio-box.component';
 import { OrganizationChartComponent } from './organization-chart/organization-chart.component';
+import { DialogModalComponent } from './dialog-modal/dialog-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -11,14 +13,17 @@ import { OrganizationChartComponent } from './organization-chart/organization-ch
     DropDownListComponent,
     RadioBoxComponent,
     OrganizationChartComponent,
+    DialogModalComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   exports: [
     DropDownListComponent,
     RadioBoxComponent,
-    OrganizationChartComponent
+    OrganizationChartComponent,
+    DialogModalComponent,
   ]
 })
 export class ShareModule { }

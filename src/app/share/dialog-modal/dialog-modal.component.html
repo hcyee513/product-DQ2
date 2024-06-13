@@ -1,0 +1,23 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{title}}</h4>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+        <input type="number" class="form-control" [formControl]="valueControl">
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button
+    type="button"
+    class="btn btn-primary text-white btn-sm"
+    (click)="certain()"
+  >
+    確定
+  </button>
+  <button type="button" class="btn btn-secondary btn-sm" (click)="cancel()">
+    取消
+  </button>
+
+  </div>
+  

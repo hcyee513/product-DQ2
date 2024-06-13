@@ -40,24 +40,18 @@ input::-webkit-inner-spin-button {
 }
 
 .up-arrow {
-    position: absolute;
     background-image: url('../../../assets/images/site-images/icon_bi_chevron_up.svg');
     width: 16px;
     height: 16px;
     background-repeat: no-repeat;
-    bottom: 15%;
-    right: 5%;
     cursor: pointer;
 }
 
 .down-arrow {
-    position: absolute;
     background-image: url('../../../assets/images/site-images/icon_bi_chevron_down.svg');
     width: 16px;
     height: 16px;
     background-repeat: no-repeat;
-    bottom: 15%;
-    left: 5%;
     cursor: pointer;
 }
 
@@ -74,6 +68,10 @@ input::-webkit-inner-spin-button {
     border-top-right-radius: 20px;
     transition: all 0.3s ease;
     overflow: hidden;
+}
+
+.rectangle-content span {
+    color: red;
 }
 
 .circule {

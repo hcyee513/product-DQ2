@@ -65,51 +65,17 @@
     </div>
 
 </div>
-<div class="level-5-wrapper col-md-12">
-    <div class="rectangle level-5">
+<div class="level-5-wrapper col-md-12" >
+    <div class="rectangle level-5" *ngFor="let item of level5; let i = index">
         <div class="rectangle-title">
-            <p class="mb-0">營業收入</p>
+            <p class="mb-0">{{item.type}}</p>
         </div>
-        <i class="up-arrow"></i>
-        <input type="number" class="form-control p-0">
-        <i class="down-arrow"></i>
-        <div class="circule">-</div>
-    </div>
-    <div class="rectangle level-5">
-        <div class="rectangle-title">
-            <p class="mb-0">營業成本</p>
+        <div class="rectangle-content d-flex align-items-end justify-content-around mb-2 w-100">
+            <i class="up-arrow" (click)="changeValue('+', i)"></i>
+            <span style="cursor: pointer;" (click)="openDialog(i)">{{item.value}}</span>
+            <i class="down-arrow" (click)="changeValue('-', i)"></i> 
         </div>
-        <i class="up-arrow"></i>
-        <input type="number" class="form-control p-0">
-        <i class="down-arrow"></i>
-        <div class="circule">-</div>
-    </div>
-    <div class="rectangle level-5">
-        <div class="rectangle-title">
-            <p class="mb-0">推銷費用</p>
-        </div>
-        <i class="up-arrow"></i>
-        <input type="number" class="form-control p-0">
-        <i class="down-arrow"></i>
-        <div class="circule">-</div>
-    </div>
-    <div class="rectangle level-5">
-        <div class="rectangle-title">
-            <p class="mb-0">管理費用</p>
-        </div>
-        <i class="up-arrow"></i>
-        <input type="number" class="form-control p-0">
-        <i class="down-arrow"></i>
-        <div class="circule">-</div>
-    </div>
-    <div class="rectangle level-5">
-        <div class="rectangle-title">
-            <p class="mb-0">研發費用</p>
-        </div>
-        <i class="up-arrow"></i>
-        <input type="number" class="form-control p-0">
-        <i class="down-arrow"></i>
-        <div class="circule">+</div>
+        <div class="circule" [hidden]="item.operation===null">{{item.operation}}</div>
     </div>
     <div class="rectangle level-5">
         <div class="rectangle-title">
