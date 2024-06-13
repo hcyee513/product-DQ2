@@ -1,6 +1,6 @@
 <div id="page-wrapper">
     <app-header [hidden]="hidden"></app-header>
     <router-outlet></router-outlet>
-    <app-footer></app-footer>
     <app-sidebar [hidden]="hidden" (colorMode)="onModeChange($event)"></app-sidebar>
+    <app-footer></app-footer>
 </div>

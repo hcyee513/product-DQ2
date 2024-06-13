@@ -1,9 +1,8 @@
 .footer {
-    height: 30px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
+    position: relative;
+    height: auto;
     color: white;
+    margin-top: 20px;
 }
 
 .icon-footer {
