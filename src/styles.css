@@ -11,7 +11,7 @@ body {
 #page-wrapper {
   position: relative;
   min-height: 1080px;
-  background-image: url('https://s3-alpha-sig.figma.com/img/9d4b/eaae/0fa731427675e6e5286bd24c86aff943?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JQbsrA1zhw0oj-L5o-T5e~Ut80TbCLRvRMYtUVD30G2EKcE193tK4MvFGkwEpqfzW3z3zU6WhAKk01SQGQy7foxfALU3082rhOFJI3mAohQ6QcWDNkAirZ5kecg86ogrWYov8-TY2NVCXlSY7kRXXronopuUIxN0Ru~w03BE7tSkZpAUvmG5j7hY8PqLJz~VZ1VXvgkGO6pIBNcbiwVtU4i1DfpC1jDvSadtkiwSWb5vBldPDZvPZZAJ7L5Orb-qQqMlNQ3xhbrmqJEyGqgh8jqQ4Cv7HGCN6NzsOEEp62EdVK~WGySaUPHT2ZjUcTYaCoHaghyV~g9Jvs4hZxFHuA__');
+  background-image: url('assets/images/site-images/main_background.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
