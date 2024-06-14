@@ -25,7 +25,8 @@ export class LineColumnChartComponent implements OnInit {
         color: '#8B9FBC'
       }
     },
-    lineColor: '#8B9FBC'
+    lineColor: '#8B9FBC',
+    crosshair: true
   }];
 
   private yAxisConfig: any[] | Highcharts.YAxisOptions[] | undefined = [{
@@ -57,8 +58,8 @@ export class LineColumnChartComponent implements OnInit {
   }
 
   private drawChart(): void {
-    console.log(this.chartOptions)
     if (Highcharts) {
+      console.log(Highcharts)
       this.chartOptions = {
         chart: {
           backgroundColor: 'rgba(255, 255, 255, 0.1)',

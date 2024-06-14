@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
-import syncCharts from './syncAddition';
+import syncCharts from '../../../expand/syncAddition';
 
 syncCharts();
 
