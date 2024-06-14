@@ -5,6 +5,8 @@ import { RadioBoxComponent } from './radio-box/radio-box.component';
 import { OrganizationChartComponent } from './organization-chart/organization-chart.component';
 import { DialogModalComponent } from './dialog-modal/dialog-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LineColumnChartComponent } from './line-column-chart/line-column-chart.component';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 
 
@@ -14,16 +16,19 @@ import { ReactiveFormsModule } from '@angular/forms';
     RadioBoxComponent,
     OrganizationChartComponent,
     DialogModalComponent,
+    LineColumnChartComponent,
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HighchartsChartModule
   ],
   exports: [
     DropDownListComponent,
     RadioBoxComponent,
     OrganizationChartComponent,
     DialogModalComponent,
+    LineColumnChartComponent,
   ]
 })
 export class ShareModule { }

@@ -33,6 +33,7 @@ import { ExchangeRateLineComponent } from './economy/exchange-rate-line/exchange
 import { FederalFundsRateComponent } from './economy/federal-funds-rate/federal-funds-rate.component';
 import { UsOverallEconomyMapComponent } from './economy/us-overall-economy-map/us-overall-economy-map.component';
 import { ShareModule } from '../share/share.module';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 
 @NgModule({
@@ -72,7 +73,9 @@ import { ShareModule } from '../share/share.module';
     NgbModule,
     RouterModule,
     MainRoutingModule,
-    ShareModule
+    ShareModule,
+    // HttpClientModule,
+    HighchartsChartModule
   ]
 })
 export class MainModule { }
