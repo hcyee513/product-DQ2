@@ -70,6 +70,13 @@ input::-webkit-inner-spin-button {
     overflow: hidden;
 }
 
+.rectangle-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
 .rectangle-content span {
     color: red;
 }

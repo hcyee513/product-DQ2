@@ -10,7 +10,7 @@
             <ng-container *ngIf="isActive === i">
                 <div class="dropdown-content" *ngFor="let item of sidebarMenu[i].items">
                     <a href="{{item.href}}" *ngIf="item.href" (click)="onItemClicked(item.title)">{{item.title}}</a>
-                    <a style="cursor: pointer;" *ngIf="item.href==null" (click)="toggleDropdownChild(item)">{{item.title}}</a>
+                    <a *ngIf="item.href==null" (click)="toggleDropdownChild(item)">{{item.title}}</a>
                 </div>
                 <div class="dropdown-content-child" *ngFor="let itemChild of sidebarMenu[i].itemsChild" [hidden]="!showChild">
                     <a href="{{itemChild.href}}" (click)="onItemClicked(itemChild.title)"><i class="trangle me-2"></i>{{itemChild.title}}</a>

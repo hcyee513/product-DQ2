@@ -1,7 +1,7 @@
 .home-page {
     margin: 0;
     padding: 0;
-    height: 1080px;
+    min-height: 1080px;
     background-image: url('../../../assets/images/site-images/home_background.png');
     background-size: cover;
     background-position: center;
@@ -11,8 +11,5 @@
     width: 240px;
     height: 235px;
     background-image: url('../../../assets/images/site-images/icon_index_logo.svg');
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border: 0;
 }

@@ -17,7 +17,7 @@ export class OrganizationChartComponent implements OnInit {
     { type: '研發費用', value: 0, operation: '+' },
   ]
 
-  constructor(private modalService: NgbModal, ) { }
+  constructor(private modalService: NgbModal ) { }
 
   ngOnInit(): void {
   }
@@ -27,6 +27,7 @@ export class OrganizationChartComponent implements OnInit {
     modalRef.componentInstance.title = this.level5[index].type;
     modalRef.componentInstance.value = this.level5[index].value;
 
+    // 關閉後呼叫
     modalRef.result.then((result) => {
       if (result !== undefined) {
         this.level5[index].value = result;
