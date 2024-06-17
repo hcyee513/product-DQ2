@@ -16,3 +16,25 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+[data-bs-theme=dark] #page-wrapper {
+  background-image: url('assets/images/site-images/dark_main_background.png');
+}
+
+[data-bs-theme=dark] h6,
+[data-bs-theme=dark] .card-title-1-s,
+[data-bs-theme=dark] .card,
+[data-bs-theme=dark] tbody th,
+[data-bs-theme=dark] td,
+[data-bs-theme=dark] .card-content p {
+  color: rgba(193, 203, 219, 1) !important;
+}
+
+[data-bs-theme=dark] .card {
+  background: linear-gradient(94.79deg, rgba(1, 19, 29, 0.7) 0%, rgba(1, 19, 29, 0.6) 100%);
+  box-shadow: 0px 0px 16px 0px rgba(139, 159, 188, 0.07);
+}
+
+[data-bs-theme=dark] .aside {
+  background: linear-gradient(90deg, rgba(43, 182, 225, 0.9) 0%, rgba(15, 101, 165, 0.95) 33.33%, rgba(0, 63, 109, 0.95) 66.67%, rgba(3, 47, 80, 0) 100%);
+}
