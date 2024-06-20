@@ -95,7 +95,7 @@
                                     <p>資產走勢</p>
                                 </div>
                             </div>
-                            <img src="../../../../assets/images/temp/asset-liability-analysis2.png" class="img-fluid m-4" alt="">
+                            <app-line-column-chart #assetTrendChart [chartData]="assetTrendData"></app-line-column-chart>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                                     <p>負債走勢</p>
                                 </div>
                             </div>
-                            <img src="../../../../assets/images/temp/asset-liability-analysis4.png" class="img-fluid m-4" alt="">
+                            <app-line-column-chart #debtTrendChart [chartData]="assetTrendData"></app-line-column-chart>
                         </div>
                     </div>
                 </div>

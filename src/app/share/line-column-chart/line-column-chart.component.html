@@ -1,1 +1,2 @@
-<highcharts-chart id={{chartId}} [Highcharts]="Highcharts" [options]="chartOptions"></highcharts-chart>
+<div id="{{chartId}}" (mousemove)="addHighlight($event)" (touchmove)="addHighlight($event)"
+    (touchstart)="addHighlight($event)"></div>

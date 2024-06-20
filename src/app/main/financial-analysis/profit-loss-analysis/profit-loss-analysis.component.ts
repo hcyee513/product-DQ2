@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
-import syncCharts from '../../../expand/syncAddition';
 
-syncCharts();
 
 @Component({
   selector: 'app-profit-loss-analysis',
@@ -82,7 +80,8 @@ export class ProfitLossAnalysisComponent implements OnInit {
     ],
     color: '#37BCC5',
     showInLegend: false //刪掉圖例
-  }, {
+  },
+  {
     name: '去年同期',
     type: 'line',
     yAxis: 0,
@@ -93,32 +92,10 @@ export class ProfitLossAnalysisComponent implements OnInit {
     color: '#8B9FBC',
   }];
 
-  updateFromInput = false;
   Highcharts = Highcharts;
-  ['incomeOptions']: Highcharts.Options = {};
-  ['expensesOptions']: Highcharts.Options = {};
-  ['grossProfitOptions']: Highcharts.Options = {};
-  ['netProfitOptions']: Highcharts.Options = {};
-
   constructor() { }
 
   ngOnInit(): void {
-    // 設置每個圖表
-    this.incomeOptions = {
-      series: this.operateIncomeData
-    };
-
-    this.expensesOptions = {
-      series: this.operateExpensesData
-    };
-
-    this.grossProfitOptions = {
-      series: this.operateGrossProfitData
-    };
-
-    this.netProfitOptions = {
-      series: this.netProfitData
-    };
   }
 
   ngAfterViewInit(): void {
@@ -129,19 +106,5 @@ export class ProfitLossAnalysisComponent implements OnInit {
 
   }
 
-  public addHighlight(e: any) {
-    let point, event;
-    const charts = Highcharts.charts;
-    charts.forEach((chart) => {
-      if (chart) {
-        // Find coordinates within the chart
-        event = chart.pointer.normalize(e);
-        // Get the hovered point
-        point = (chart.series[0] as any).searchPoint(event, true);
-        if (point) {
-          point.highlight(e);
-        }
-      }
-    });
-  }
+
 }

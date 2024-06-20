@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as Highcharts from "highcharts";
 import { v4 as uuidv4 } from 'uuid';
+import syncCharts from '../../expand/syncAddition';
+
+syncCharts();
 
 @Component({
   selector: 'app-line-column-chart',
@@ -8,9 +11,6 @@ import { v4 as uuidv4 } from 'uuid';
   styleUrls: ['./line-column-chart.component.css']
 })
 export class LineColumnChartComponent implements OnInit {
-
-  @Input() chartOptions: Highcharts.Options = {};
-  Highcharts = Highcharts;
 
   private titleConfig: Highcharts.TitleOptions = {
     text: ''
@@ -46,6 +46,7 @@ export class LineColumnChartComponent implements OnInit {
 
   public chart: any = null;
   public chartId: string = "container";
+  @Input() chartData: any[] = [];
 
   constructor() { }
 
@@ -58,31 +59,82 @@ export class LineColumnChartComponent implements OnInit {
   }
 
   private drawChart(): void {
-    if (Highcharts) {
-      console.log(Highcharts)
-      this.chartOptions = {
-        chart: {
-          backgroundColor: 'rgba(255, 255, 255, 0.1)',
-          zooming: {
-            type: 'xy'
+    this.chart = Highcharts.chart(this.chartId, {
+      chart: {
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+      },
+      title: this.titleConfig,
+      xAxis: this.xAxisConfig,
+      yAxis: this.yAxisConfig,
+      credits: {
+        enabled: false
+      },
+      legend: {
+        align: 'center',
+      },
+      tooltip: {
+        shared: true
+      },
+      plotOptions: {},
+      series: this.chartData,
+      responsive: {
+        rules: [{
+          condition: {
+            maxWidth: 820
           }
-        },
-        title: this.titleConfig,
-        xAxis: this.xAxisConfig,
-        yAxis: this.yAxisConfig,
-        credits: {
-          enabled: false
-        },
-        legend: {
-          align: 'center',
-        },
-        tooltip: {
-          shared: true
-        },
-        series: this.chartOptions.series
-      };
-    }
-
+        }]
+      }
+    })
   }
+
+  public addHighlight(e: any) {
+    let point, event;
+    for (let i = 0; i < Highcharts.charts.length; i++) {
+      const chart = Highcharts.charts[i];
+      if (chart) {
+        event = chart.pointer.normalize(e);
+        point = (chart.series[0] as any).searchPoint(event, true);
+        if (point) {
+          point.highlight(e);
+        }
+      }
+    };
+  }
+
+  public updatePlotOptions(value: string): void {
+    console.log(value)
+    this.chart.update({
+      plotOptions: {
+        column: {
+          stacking: value
+        }
+      }
+    })
+  
+  }
+
+  public updateXAxis(data: string): void {
+    // const categories = data.split(',').map(item => item.trim());
+    // this.chart.xAxis[0].categories.push(categories);
+    // this.chart.update({
+    //   xAxis: {
+    //     categories: this.chart.xAxis[0].categories
+    //   }
+    // });
+  }
+
+  public updateYAxis(value: boolean): void {
+    if (!value) {
+      this.chart.update({
+        yAxis: {
+          title: {
+            text: '',
+          }
+        }
+      })  
+    }
+    
+  }
+
 }
 

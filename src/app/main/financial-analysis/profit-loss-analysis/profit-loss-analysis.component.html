@@ -144,8 +144,7 @@
                 </div>
             </div>
         </div>
-        <div class="boxChart__container" (mousemove)="addHighlight($event)" (touchmove)="addHighlight($event)"
-            (touchstart)="addHighlight($event)">
+        <div class="boxChart__container" >
             <div class="row gx-4 align-items-start">
                 <div class="col-12 col-md-6">
                     <div class="card mt-3">
@@ -156,7 +155,7 @@
                                     <a class="btn p-2">營業成本</a>
                                 </div>
                             </div>
-                            <app-line-column-chart #OperateIncome [chartOptions]="incomeOptions"></app-line-column-chart>
+                            <app-line-column-chart [chartData]="operateIncomeData"></app-line-column-chart>
                         </div>
                     </div>
                 </div>
@@ -164,7 +163,7 @@
                     <div class="card mt-3">
                         <div class="card-body">
                             <p class="card-title-1">營業費用</p>
-                            <app-line-column-chart #OperateExpenses [chartOptions]="expensesOptions"></app-line-column-chart>
+                            <app-line-column-chart [chartData]="operateExpensesData"></app-line-column-chart>
                         </div>
                     </div>
                 </div>
@@ -174,7 +173,7 @@
                     <div class="card mt-3">
                         <div class="card-body">
                             <p class="card-title-1">營業毛利</p>
-                            <app-line-column-chart #OperateGrossProfit [chartOptions]="grossProfitOptions"></app-line-column-chart>
+                            <app-line-column-chart [chartData]="operateGrossProfitData"></app-line-column-chart>
                         </div>
                     </div>
                 </div>
@@ -182,7 +181,7 @@
                     <div class="card mt-3">
                         <div class="card-body">
                             <p class="card-title-1">稅前淨利</p>
-                            <app-line-column-chart #NetProfit [chartOptions]="netProfitOptions"></app-line-column-chart>
+                            <app-line-column-chart [chartData]="netProfitData"></app-line-column-chart>
                         </div>
                     </div>
                 </div>
